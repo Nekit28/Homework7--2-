@@ -102,7 +102,7 @@ public class Main {
         }
     }
     public static void task8 () {
-        System.out.println("Задача 8");
+        System.out.println("Задача8");
         int year = 2023;
         int oldYear = year - 200;
         int futureYear = year + 100;
