@@ -56,12 +56,10 @@ public class Main {
     public static void task4() {
         System.out.println("Задача 4");
         int salary = 15000;
-        int total = 0;
-        int month = 0;
-        while (total <= 12_000_000) {
-            month = month + 1;
-            total = total + salary / 7;
-            System.out.println("месяц " + month + " сумма накоплений равна " + total);
+        int month = 1;
+        for (;salary < 12_000_000; month=month+1 ) {
+            salary += salary/100*7;
+            System.out.println("месяц " + month + " сумма накоплений равна " + salary);
         }
         System.out.println();
     }
@@ -69,40 +67,38 @@ public class Main {
     public static void task5() {
         System.out.println("Задача 5");
         int salary = 15000;
-        int total = 0;
-        int month = 0;
-        while (total <= 12_000_000) {
+        int month = 1;
+        while (salary < 12_000_000) {
             month = month + 1;
-            total = total + salary / 7;
+            salary += salary/100*7;
             if (month % 6 == 0) {
-                System.out.println("месяц " + month + " сумма накоплений равна " + total);
+                System.out.println("месяц " + month + " сумма накоплений равна " + salary);
             }
         }
     }
     public static void task6 () {
         System.out.println("Задача 6");
         int salary = 15000;
-        int total = 0;
-        for (int i = 0; i <= 108; i = i + 1) {
-            total = total + total / 93;
-            total = total + salary;
+        for (int i = 1; i <= 108; i = i + 1) {
+            salary += salary / 100*7;
             if (i % 6 ==0) {
-                System.out.println("месяц " + i + " сумма накоплений равна " + total);
+                System.out.println("месяц " + i + " сумма накоплений равна " + salary);
             }
         }
     }
     public static void task7 () {
         System.out.println("Задача 7");
         int friday = 5;
-        while (friday < 31) {
-            friday = friday + 1;
-            if (friday % 7 == 0) {
-                System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет");
-            }
+        int dayWeek = 7;
+        int dayMonth = 31;
+        for (int n = friday; n <= dayMonth; n += dayWeek) {
+
+                System.out.println("Сегодня пятница, " + n + "-е число. Необходимо подготовить отчет");
+
         }
     }
     public static void task8 () {
-        System.out.println("Задача 8");
+        System.out.println("Задача8");
         int year = 2023;
         int oldYear = year - 200;
         int futureYear = year + 100;
